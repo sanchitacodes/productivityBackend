@@ -1,0 +1,49 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+h1, h2 {
+  color: #007bff;
+}
+
+form {
+  margin: 10px 0;
+}
+
+input, .btn-todo, .btn-user {
+  padding: 8px;
+  margin: 5px;
+}
+
+.btn-todo, .btn-user {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.todo-ul {
+  list-style: none;
+  padding: 0;
+}
+
+.todo-li {
+  margin: 10px 0;
+}
