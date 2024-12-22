@@ -40,7 +40,6 @@ app.engine("ejs", ejsMate);
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.json());
 
-
 app.use(
   session({
     secret: "thisissecret",

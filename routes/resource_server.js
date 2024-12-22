@@ -6,8 +6,6 @@ const { isLoggedIn } = require("../middleware");
 const router = express.Router();
 const cors = require('cors');
 
-
-
 // Endpoint to render the homepage (resource library) - Show resources related to the logged-in user
 router.get('/', isLoggedIn, wrapAsync(async (req, res) => {
   const userId = req.user._id;  // Get the logged-in user's ID from `req.user`
