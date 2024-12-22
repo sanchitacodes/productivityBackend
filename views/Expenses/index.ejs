@@ -8,8 +8,9 @@
 </head>
 <body>
     <h1>Expense</h1>
+    <form action="/expenses/spend" method="POST">
     <div class="input-section">
-        <form action="/expenses/spend" method="POST">
+        
             <div class="category">
                 <label for="category-input">Category:</label>
                 <input type="text" name="category" id="category-input" placeholder="Enter category" required>
@@ -23,8 +24,9 @@
                 <input type="date" name="date" id="date-input" required>
             </div>
             <button type="submit" id="add-btn">Add</button>
-        </form>
+        
     </div>
+    </form>
 
     <div class="cash-in-section">
         <h2>Cash In</h2>
