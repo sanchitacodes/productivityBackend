@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resource Library</title>
+    <link rel="stylesheet" href="/styles/Resource.css">
+</head>
+<body>
+    <div class="library">
+        <h1>Resource Library</h1>
+
+        <!-- Add Resource Form -->
+        <form action="/resource/add-resource" method="POST">
+            <div class="form-section">
+                <input type="text" name="title" placeholder="Enter title" required><br>
+                <input name="description" placeholder="Enter description" required><br>
+                <input type="url" name="url" placeholder="Enter URL" required><br>
+                <input type="text" name="category" placeholder="Enter category" required><br>
+                <button type="submit">Add Resource</button>
+            </div>
+        </form>
+        
+        <!-- Categories Section -->
+        <div class="resource-list" id="resource-list">
+            <h2>Categories</h2>
+            <div class="categories-container">
+                <% categories.forEach(category => { %>
+                    <div class="category">
+                        <a href="/resource/category/<%= category %>"><%= category %></a>
+                    </div>
+                <% }) %>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
