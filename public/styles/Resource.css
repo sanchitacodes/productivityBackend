@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 20px;
+}
+
+.library {
+    max-width: 800px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.form-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input, button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    flex: 1;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    flex: none;
+    margin-left: -10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Categories section styling */
+
+.resource-list {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.resource-list h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: #444;
+}
+
+/* Container for category divs */
+.categories-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-between;
+}
+
+/* Styling for each category div */
+.category {
+    background-color: #f0f0f0;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 45%;  /* Each category div takes up 45% of the width */
+    text-align: center;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Category link styling */
+.category a {
+    font-size: 18px;
+    color: #007BFF;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+/* Hover effects */
+.category:hover {
+    background-color: #f9f9f9;
+    transform: translateY(-5px);
+}
+
+.category a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}

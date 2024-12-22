@@ -11,10 +11,10 @@ router.get("/", isLoggedIn, wrapAsync(async (req, res) => {
   res.render("todos/index.ejs", { todos });
 }));
 
-// Add new todo
-router.get("/new", isLoggedIn, (req, res) => {
-  res.render("todos/new.ejs");
-});
+// // Add new todo
+// router.get("/new", isLoggedIn, (req, res) => {
+//   res.render("todos/new.ejs");
+// });
 
 router.post("/", isLoggedIn, wrapAsync(async (req, res) => {
   const { task } = req.body;
