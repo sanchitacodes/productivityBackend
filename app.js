@@ -14,6 +14,7 @@ const authRoutes = require("./routes/auth");
 const todoRoutes = require("./routes/todos");
 const expenseRoutes = require("./routes/expense"); // Include expense routes
 const homeRoutes = require("./routes/home");
+const resourceRouter = require('./routes/resource_server'); 
 //const cashinRoutes = require("./routes/cashin"); // Include cash-in routes
 
 
@@ -37,7 +38,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 app.engine("ejs", ejsMate);
 app.use(express.static(path.join(__dirname, "public")));
-
+app.use(express.json());
 
 
 app.use(
@@ -74,6 +75,7 @@ app.use("/", authRoutes);
 app.use("/todos", todoRoutes);
 app.use("/expenses", expenseRoutes); // Add expense routes
 app.use("/home", homeRoutes);
+app.use('/resource', resourceRouter);
 
 
 // Catch-All for Undefined Routes
