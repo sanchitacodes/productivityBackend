@@ -12,14 +12,15 @@
     
     <h1>Your To-Do List</h1>
   
-    
-    <form >
-      <input type="text" name="task" class="todo-input" placeholder="Add a new task">
-      
-      <button type="submit" class="add-btn"><a href="/todos/new">Add Task</a></button>
-      
-      
+    <form action="/todos" method="POST">
+      <input type="text" name="task" class="todo-input" placeholder="Add a new task" required>
+      <button type="submit" class="add-btn">Add Task</button>
+       
     </form>
+
+
+
+  
     <!-- <a href="/todos/new">Add New Task</a> |  -->
     <a href="/logout">Logout</a>
     <ul class="todo-list">
@@ -28,7 +29,7 @@
           <form action="/todos/<%= todo._id %>?_method=PUT" method="POST">
               <input type="checkbox" <%= todo.completed ? 'checked' : '' %> /> <%= todo.task %>
               <button type="submit btn-todo">Update</button>
-            </form>
+          </form>
             <form action="/todos/<%= todo._id %>?_method=DELETE" method="POST">
               <button type="submit btn-todo" class="delete-btn">Delete</button>
             </form>
@@ -38,4 +39,3 @@
     </div>
   <script src="/js/script.js"></script>
 </body>
-</html>
