@@ -69,10 +69,14 @@
           <div class="scards">
             <div class="scard one">
                 <i class="fa-solid fa-list-check"></i>
-              <h3>To Do List</h3>
-              <form action="/todos" method="GET">
+                
+              <!-- <h3 onclick="document.querySelector('#todoForm').submit()">To Do List</h3>
+              <form id="todoForm" action="/todos" method="GET">
                 <button type="submit"  class="btn-todo">Go to Todos</button>
-            </form>
+            </form> -->
+            <form id="todoForm" action="/todos" method="GET">
+              <h3 onclick="document.getElementById('todoForm').submit()">To Do List</h3>
+          </form>
             </div>
             <div class="scard two">
                 <i class="fa-solid fa-stopwatch"></i>
@@ -80,9 +84,12 @@
             </div>
             <div class="scard three">
             <i class="fa-solid fa-money-bill-trend-up"></i>
-            </h3>Expense Tracker</h3>
+            <!-- </h3>Expense Tracker</h3>
             <form action="/expenses" method="GET">
                 <button type="submit" class="btn btn-todo">Go to Expenses</button>
+            </form> -->
+            <form id="todoExpense" action="/expenses" method="GET">
+              <h3 onclick="document.getElementById('todoExpense').submit()">Expense Tracker</h3>
             </form>
             </div>
             <div class="scard four">
