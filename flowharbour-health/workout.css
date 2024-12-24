@@ -1,0 +1,439 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+root {
+    --clr-primary: #7380ec;
+    --clr-danger: #ff7782;
+    --clr-success: #41f1b6;
+    --clr-white: #fff;
+    --clr-info-dark: #7d8da1;
+    --clr-info-light: #dce1eb;
+    --clr-dark: #363949;
+    --clr-warnig: #ff4edc;
+    --clr-light: rgba(132, 139, 200, 0.18);
+    --clr-primary-variant: #111e88;
+    --clr-dark-variant: #677483;
+    --clr-color-background: #f6f6f9;
+  
+    --card-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 0.8rem;
+    --border-radius-3: 1.2rem;
+  
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+    --box-shadow: 0 2rem 3rem var(--clr-light);
+  
+  }
+  
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: 0;
+    list-style: none;
+    appearance: none;
+  }
+
+body{
+    font-family: 'Poppins';
+    width: 100vw;
+    height: 100vh;
+    font-size: 0.88rem;
+    user-select: none;
+    overflow-x: hidden;
+    background-color: var(--clr-color-background);
+}
+
+.container{
+    display: grid;
+    width: 96%;
+    gap: 1.5rem;
+    grid-template-columns: auto 14rem;
+    margin: 0 auto;
+}
+
+a{
+    color: var(--clr-dark);
+}
+
+h1{
+    font-weight: 800;
+    font-size: 1.8rem;
+}
+
+h2{
+    font-size: 1.4rem;
+}
+
+h3{
+    font-size: 0.87rem;
+}
+
+h4{
+    font-size: 0.8rem;
+}
+
+h5{
+    font-size: 0.77rem;
+}
+
+small{
+    font-size: 0.75rem;
+}
+
+.profile-photo{
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.text-muted{
+    color: var(--clr-info-dark);
+}
+
+p{
+    color: var(--clr-dark-variant);
+}
+
+b{
+    color: var(--clr-dark);
+}
+
+.primary{
+    color: var(--clr-primary);
+}
+
+.success{
+    color: var(--clr-success);
+}
+
+.danger{
+    color: var(--clr-danger);
+}
+
+.warning{
+    color: var(--clr-warnig);
+}
+
+/* Main section */
+
+main{
+    margin-top: 1.4rem;
+    width: auto;
+    /* padding: 1.8rem; */
+}
+
+main input{
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    color: var(--clr-dark);
+}
+
+main .date{
+    display: inline-block;
+    background-color: #f6f6f9;
+    border-radius: 2rem;
+    margin-top: 1rem;
+    padding: 0.5rem 1.6rem;
+}
+
+main .insights{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1.6rem;
+}
+
+main .insights>div{
+    background-color: #f6f6f9;
+    padding: 1.8rem;
+    border-radius: 2rem;
+    margin-top: 1rem;
+    box-shadow:  0 2rem 3rem rgba(132, 139, 200, 0.18);
+    transition: all .3s ease;
+}
+
+main .insights > div:hover{
+    box-shadow: none;
+}
+
+main .insights > div span{
+    background-color: #c54c82;
+    padding: 0.5rem;
+    border-radius: 50%;
+    color: #f6f6f9;
+    font-size: 2rem;
+}
+
+main .insights > div.expenses span{
+    background-color: #ec729c;
+}
+
+main .insights > div.income span{
+    background-color: #ffa974;
+}
+
+main .insights > div .middle{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main .insights > div .middle h1{
+    font-size: 1.6rem;
+}
+
+main h1{
+    color: #363949;
+}
+
+main .insights h1 h3 p{
+    color: #363949;
+}
+
+main .insights .progress{
+    position: relative;
+    height: 68px;
+    width: 68px;
+    border-radius: 50px;
+}
+
+main .insights svg{
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    top: 0;
+}
+
+main .insights svg circle{
+    fill: none;
+    stroke: #524c84;
+    transform: rotate(270,80,80);
+    stroke-width: 5;
+}
+
+main .insights .sales svg circle{
+    stroke-dashoffset: 10;
+    stroke-dasharray: 150;
+}
+
+main .insights .expenses svg circle{
+    stroke-dashoffset: 0;
+    stroke-dasharray: 150;
+}
+
+main .insights .income svg circle{
+    stroke-dashoffset: 70;
+    stroke-dasharray: 200;
+}
+
+main .insights .progress .number{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .recent_order{
+    margin-top: 2rem;
+}
+
+main .recent_order h2{
+    color: #677483;
+}
+main .recent_order table{
+    background-color: #f6f6f9;
+    width: 100%;
+    border-radius: 2rem;
+    padding: 1.8rem;
+    text-align: center;
+    box-shadow: 0 2rem 3rem rgba(132, 139, 200, 0.18);
+    transition: all 0.3s ease;
+    color: #363949;
+}
+
+
+main .recent_order table:hover{
+    box-shadow: none;
+}
+
+main table tbody tr{
+    height: 3.8rem;
+    border-radius: 1px solid #f6f6f6 ;
+    color: #677483;
+}
+
+main table tbody td{
+    height: 3.8rem;
+    border-bottom: 1px solid #f6f6f6;
+
+}
+main table tbody tr:last-child{
+    border: none;
+}
+
+main .recent_order a{
+    text-align: center;
+    display: block;
+    margin: 1rem;
+}
+
+/*right sec*/
+
+.right{
+    margin-top: 1.4rem;
+}
+
+.right h2{
+    color: #363949;
+}
+
+.right .top{
+    display: flex;
+    justify-content: start;
+    gap: 2rem;
+    margin-bottom: 6rem;
+}
+
+ .right .workoutadd{
+    margin-top: 4rem;
+    margin-left: px;
+}
+
+.right #workout-form input {
+    width: 200px; /* Split width for two inputs side-by-side */
+    padding: 10px; /* Padding for input field */
+    margin: 5px; /* Space between inputs */
+    border: 1px solid #bdc3c7; /* Light border */
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+.right #workout-form button {
+    width: 200px;
+    padding: 10px ; /* Button padding for clickable area */
+    background-color:  #363949; /* Green background for button */
+    border: none; /* Remove default border */
+    color: #fff; /* White text */
+    border-radius: 4px; /* Rounded button corners */
+    cursor: pointer; /* Pointer cursor for interactivity */
+    transition: background-color 0.3s; /* Smooth hover transition */
+    margin-left: 6px;
+}
+
+.right .total-calories {
+    margin-top: 20px;
+    
+}
+
+.right .total-calories h3 {
+    margin: 0; /* Remove default margin */
+    font-size: 20px; /* Increase font size for emphasis */
+}
+
+.right .music{
+    margin: 30px 30px;
+}
+
+/* Workout list styling */
+.workout-list {
+    margin-top: 40px;
+}
+
+.workout-list h2 {
+    margin-bottom: 20px;
+}
+
+/* Styling for each workout item */
+#workouts li {
+    background-color: #fff; /* White background for contrast */
+    padding: 15px;
+    margin-bottom: 10px; /* Spacing between workout items */
+    border-left: 5px solid #363949; /* Green border for identification */
+    display: flex; /* Flexbox for alignment */
+    justify-content: space-between; /* Spread items across the row */
+    align-items: center; /* Center vertically */
+    animation: fadeIn 0.5s; /* Smooth fade-in animation */
+}
+
+#workouts li .delete-btn {
+    background-color: transparent; /* Transparent background */
+    border: none; /* Remove button border */
+    color: #363949; /* Red text for delete button */
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#workouts li .delete-btn:hover {
+    color: #e74c3c; /* Darker red on hover */
+}
+
+/* Chart section styling */
+.chart-section {
+    margin-top: ;
+}
+
+.chart-section h2 {
+    margin-bottom: ;
+}
+
+#caloriesChart {
+    width: 10px;
+    height: 10px; /* Responsive chart */
+}
+
+
+.right .workoutvideos {
+    margin-top: 20px;
+}
+
+.right .workoutvideos .videos img{
+    width: 60px;
+    height: 40px;
+}
+
+.right .workoutvideos .videos{
+    background-color: #f6f6f9;
+    padding: 1.8rem;
+    border-radius: 2rem;
+    margin-top: 1rem;
+    box-shadow:  0 2rem 3rem rgba(132, 139, 200, 0.18);
+    transition: all .3s ease;
+    font-style: italic;
+}
+
+.right .workoutvideos .videos:hover{
+    box-shadow: none;
+}
+
+
+.right .workoutvideos .videos .first{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.right .workoutvideos .videos .middle p{
+    font-size: 13px;
+}
+
+.right p{
+    color: #363949;
+}
+
+
+
+
+
+
+
+
+
+
+

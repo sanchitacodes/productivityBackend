@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Tracker - Track your daily mood</title>
+    <link rel="stylesheet" href="moodtracker.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome Back, User!</h1>
+        <p>How do you feel Today?</p> <!--😊 😢 😠 😴 😃-->
+        <div class="mood-selector">
+            <button id="btn1" class="mood-btn" data-mood="happy"><picture>
+                <source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f604/512.webp" type="image/webp">
+                <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f604/512.gif" alt="😄" width="32" height="32">
+              </picture>
+            </button>
+            <button  id="btn2" class="mood-btn" data-mood="sad">
+                <picture>
+                    <source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f61e/512.webp" type="image/webp">
+                    <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f61e/512.gif" alt="😞" width="32" height="32">
+                  </picture>
+            </button>
+            <button id="btn3" class="mood-btn" data-mood="angry">
+                <picture>
+                    <source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f620/512.webp" type="image/webp">
+                    <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f620/512.gif" alt="😠" width="32" height="32">
+                  </picture>
+            </button>
+            <button id="btn4" class="mood-btn" data-mood="tired">
+                <picture>
+                    <source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f62e_200d_1f4a8/512.webp" type="image/webp">
+                    <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f62e_200d_1f4a8/512.gif" alt="😮" width="32" height="32">
+                  </picture>
+            </button>
+            <button id="btn5" class="mood-btn" data-mood="excited">
+                <picture>
+                    <source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1fae0/512.webp" type="image/webp">
+                    <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1fae0/512.gif" alt="🫠" width="32" height="32">
+                  </picture>
+            </button>
+        </div>
+
+        <textarea id="note" placeholder="Tell us why?"></textarea>
+
+        <!-- A button that, when clicked, saves the selected mood and note. 
+             It interacts with the JavaScript functionality to store this data in localStorage. -->
+        <!--<button id="save-btn">Save</button> -->
+
+        <button id="save-btn" class="button-74" role="button">Save</button>
+
+       <h2>Whats your mood today?</h2>
+        <div id="today-mood"></div>
+        <p class="mess" id="output"></p>
+       <div id="save-message" class="hidden"></div> 
+        
+    </div>
+
+   
+
+    <script src="moodtracker2.js">
+       // Get reference to the output paragraph
+const output = document.getElementById('output');
+
+// Define messages for each button
+const messages = {
+    btn1: "Your happiness is like sunshine—it lights up everything around you! 😊 Keep shining bright!",
+    btn2: "Even on cloudy days, remember that the sun is still shining behind the clouds. You’ll feel better soon! 💛",
+    btn3: "Take a deep breath and let go of the storm inside. You’ve got this! 🌟",
+    btn4: "Rest up, recharge, and take it easy. Tomorrow is a fresh start! 🌙💤",
+    btn5: "Hey, it's okay to pause. Your brain just needs a little reset. Take it slow, you’re doing your best! 🌸💆‍♂️"
+};
+
+// Add event listeners for each button
+for (let buttonId in messages) {
+    const button = document.getElementById(buttonId);
+    button.addEventListener('click', () => {
+        // Display the specific message for the clicked button
+        output.textContent = messages[buttonId];
+    });
+}
+
+    </script>
+
+</body>
+</html>

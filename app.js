@@ -76,6 +76,7 @@ app.use("/expenses", expenseRoutes); // Add expense routes
 app.use("/home", homeRoutes);
 app.use('/resource', resourceRouter);
 
+app.use('/flowharbour-health', express.static(path.join(__dirname, 'flowharbour-health')));
 
 // Catch-All for Undefined Routes
 app.all("*", (req, res, next) => {

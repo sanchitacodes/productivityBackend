@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    font-family: 'Poppins';
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: 400% 400%; 
+  background-color: #FBEEE0;
+  }
+
+  .container {
+    width: 90%;
+    max-width: 600px;
+    padding: 30px;
+    text-align: center;
+  }
+  h1 {
+    font-size: 2.5em;
+    font-style: italic;
+    margin-bottom: 10px;
+    color: #422800;
+  }
+ 
+  p {
+    font-size: 1.5em;
+    font-style: italic;
+    color: #422800;
+  }
+  
+  .mood-selector {
+    margin: 20px 0;
+  }
+  
+
+  .mood-btn {
+    font-size: 2.5em;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: transform 0.2s;
+  }
+
+  .mood-btn:hover,
+  .mood-btn.selected {
+    transform: scale(1.9);
+  }
+
+  textarea {
+    width: 100%;
+    height: 100px;
+    margin: 20px 0;
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+.button-74 {
+  background-color: #fbeee0;
+  border: 2px solid #422800;
+  border-radius: 30px;
+  box-shadow: #422800 4px 4px 0 0;
+  color: #422800;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-74:hover {
+  background-color: #fff;
+}
+
+.button-74:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .button-74 {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+}
+  
+
+  
+  h2 {
+    margin-top: 30px;
+    color: #333;
+  }
+  #today-mood {
+    margin-top: 5px;
+    font-size: 1.2em;
+    font-family: 'poppins';
+  }
+  
+  #save-message {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #333;
+  }
+
+  #output{
+    margin-top: 5px;
+    font-size: 1.2em;
+  }
+  
+
+  .hidden {
+    display: none;
+  }
+  
+  
+  body.happy {
+    background-color: #fdffcd;
+  }
+  
+  body.sad {
+    background-color: #e0ffcd;
+  }
+  
+  body.angry {
+    background-color: #ffcab0;
+  }
+  
+  body.tired {
+    background-color: #ffebbb;
+  }
+  
+  body.excited {
+    background-image: linear-gradient(135deg, #fce38a, #f38181);
+  }
