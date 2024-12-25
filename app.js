@@ -6,50 +6,40 @@ const passport = require("passport");
 const LocalStrategy = require("passport-local");
 const methodOverride = require("method-override");
 const path = require("path");
-const ExpressError = require("./utils/ExpressError.js");
 const ejsMate = require("ejs-mate");
 
 const User = require("./models/user");
 const authRoutes = require("./routes/auth");
 const todoRoutes = require("./routes/todos");
-const expenseRoutes = require("./routes/expense"); // Include expense routes
+const expenseRoutes = require("./routes/expense");
 const homeRoutes = require("./routes/home");
-const resourceRouter = require('./routes/resource_server'); 
-//const cashinRoutes = require("./routes/cashin"); // Include cash-in routes
-
-
+const resourceRouter = require("./routes/resource_server");
+// const notesRoutes = require("./routes/notes");
 
 const app = express();
 
 // Database Connection
 mongoose
   .connect("mongodb://127.0.0.1:27017/flowharbour")
-  .then(() => {
-    console.log("Connected to the database");
-  })
-  .catch((err) => {
-    console.log("Database connection error: ", err);
-  });
+  .then(() => console.log("Connected to the database"))
+  .catch((err) => console.log("Database connection error: ", err));
 
 // Middleware Setup
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
-app.use(express.urlencoded({ extended: true }));
-app.use(methodOverride("_method"));
 app.engine("ejs", ejsMate);
-app.use(express.static(path.join(__dirname, "public")));
+
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(methodOverride("_method"));
+app.use(express.static(path.join(__dirname, "public")));
 
 app.use(
   session({
     secret: "thisissecret",
     resave: false,
     saveUninitialized: true,
-    cookie: {
-      expires: Date.now() + 1000 * 60 * 60 * 24 * 7,
-      maxAge: 1000 * 60 * 60 * 24 * 7,
-      httpOnly: true,
-    },
+    cookie: { httpOnly: true, maxAge: 1000 * 60 * 60 * 24 * 7 },
   })
 );
 app.use(flash());
@@ -61,7 +51,7 @@ passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
-// Flash & Local Variables Middleware
+// Flash Messages Middleware
 app.use((req, res, next) => {
   res.locals.success = req.flash("success");
   res.locals.error = req.flash("error");
@@ -71,29 +61,34 @@ app.use((req, res, next) => {
 
 // Routes
 app.use("/", authRoutes);
-app.use("/todos", todoRoutes);
-app.use("/expenses", expenseRoutes); // Add expense routes
+app.use("/expenses", expenseRoutes);
 app.use("/home", homeRoutes);
-app.use('/resource', resourceRouter);
+app.use("/todos", todoRoutes);
+app.use("/resource", resourceRouter);
+// app.use("/notes", notesRoutes);
 
-app.use('/Study', express.static(path.join(__dirname, 'Study')));
+// Static Study Page
+app.get("/study", (req, res) => {
+  res.render("Study/study.ejs");
+});
+app.use('/Notes', express.static(path.join(__dirname, 'Notes')))
+
+// FlowHarbour Health Route
 app.use('/flowharbour-health', express.static(path.join(__dirname, 'flowharbour-health')));
-
-
 
 // Catch-All for Undefined Routes
 app.all("*", (req, res, next) => {
-  next(new ExpressError(404, "Page Not Found"));
+  const err = new Error("Page Not Found");
+  err.status = 404;
+  next(err);
 });
 
-// Error Handling
+// Error Handling Middleware
 app.use((err, req, res, next) => {
-  const { statusCode = 500, message = "Something went wrong!" } = err;
-  res.status(statusCode).render("Error/error.ejs", { message });
+  const { status = 500, message = "Something went wrong!" } = err;
+  res.status(status).render("Error/error.ejs", { message });
 });
 
 // Start the Server
 const PORT = 3000;
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
-});
+app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));

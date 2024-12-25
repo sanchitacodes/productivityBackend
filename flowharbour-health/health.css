@@ -17,7 +17,7 @@ body{
     font-size: 0.88rem;
     user-select: none;
     overflow-x: hidden;
-    background-color: ;
+    background-color: white;
     font-family: 'Poppins';
 }
 
@@ -109,16 +109,6 @@ main .insights h1 h3 p{
     color: #363949;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+#todoForm h1, #resForm h1{
+    cursor: pointer;
+}

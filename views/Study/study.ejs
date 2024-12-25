@@ -25,9 +25,9 @@
                         </span>
                     <div class="middle">
                         <div class="left">
-                            <a href="/todos">
-                            <h1>To-Do List</h1>
-                            </a>
+                            <form id="todoForm" action="/todos" method="GET">
+                            <h1 onclick="document.getElementById('todoForm').submit()">To-Do List</h1>
+                            </form>
                         </div>
                         <div class="progress">
                            
@@ -43,8 +43,9 @@
                         </span>
                     <div class="middle">
                         <div class="left">
-                            <a href="/resource">
-                            <h1>Resource Library Management</h1></a>
+                            <form id="resForm" action="/resource" method="GET">
+                                <h1 onclick="document.getElementById('resForm').submit()">Resource Library Management</h1>
+                            </form>
                         </div>
                         <div class="progress">
                            
@@ -62,8 +63,10 @@
                         </span>
                     <div class="middle">
                         <div class="left">
-                          <a href="./Notes/Notesindex.html">
-                            <h1>Notes Organizer</h1></a>
+                            <!-- <form id="notesForm" action="/notes" method="GET">
+                            <h1 onclick="document.getElementById('notesForm').submit()">Notes Organizer</h1>
+                            </form> -->
+                        <a href="/Notes/index.html">Notes Organizer</a>
                         </div>
                         <div class="progress">
                             

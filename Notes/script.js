@@ -1,3 +1,4 @@
+
 const notesContainer = document.querySelector(".notes-container");
 const btn = document.querySelector(".btn");
 let notes = document.querySelectorAll(".inpot-box");
