@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,6 +6,8 @@
     <title>Flow Harbour| Productivity</title>
     <!-- style -->
      <link rel="stylesheet" href="/styles/dash.css"/>
+     <link rel="stylesheet" href="stopwatch.css"/>
+
 
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -118,48 +119,18 @@
           </form>
         </div>
         <div class="shortcuts">
-          <h2 class="shortcuts-title">TIME MANAGEMENT</h2>
-          <div class="scards">
-            <div class="scard one">
-              <i class="fa-solid fa-list-check"></i>
-
-              <!-- <h3 onclick="document.querySelector('#todoForm').submit()">To Do List</h3>
-              <form id="todoForm" action="/todos" method="GET">
-                <button type="submit"  class="btn-todo">Go to Todos</button>
-            </form> -->
-              <a href="stopwatch.html"><h3>Stopwatch</h3></a>
-              
+          <h2 class="shortcuts-title">Stopwatch</h2>
+          <div class="container23">
+            <div class="stopwatchtimer">
+                00:00:00
             </div>
-            <div class="scard two">
-              <i class="fa-solid fa-stopwatch"></i>
-              <a href="timer1.html"><h3>Timer</h3></a>
+            <div class="buttons">
+                <button class="btn start" id="start">Start</button>
+                <button class="btn stop" id="stop">Stop</button>
+                <button class="btn reset" id="reset">Reset</button>
             </div>
-            <div class="scard three">
-              <i class="fa-solid fa-money-bill-trend-up"></i>
-              <!-- </h3>Expense Tracker</h3>
-            <form action="/expenses" method="GET">
-                <button type="submit" class="btn btn-todo">Go to Expenses</button>
-            </form> -->
-              <!-- <form id="todoExpense" action="/expenses" method="GET">
-                <h3 onclick="document.getElementById('todoExpense').submit()">
-                  Expense Tracker
-                </h3>
-              </form> -->
-              <h3>Promodoro</h3>
-            </div>
-            <!-- <div class="scard four">
-              <i class="fa-solid fa-face-smile"></i>
-              <h3>Mood Tracker</h3>
-            </div>
-            <div class="scard five">
-              <i class="fa-solid fa-stopwatch-20"></i>
-              <h3>Pomodoro</h3>
-            </div>
-            <div class="scard six">
-              <i class="fa-solid fa-hourglass-end"></i>
-              <h3>Timer</h3>
-            </div> -->
-          </div>
+    
+        </div>
         </div>
       </div>
 
@@ -169,8 +140,11 @@
           
             <div class="time">
               <div class="clock">
+                
                 <div class="hand hour" id="hour"></div>
-                <div class="hand minute" id="minute"></div>
+                <div class="hand minute"
+                 id="minute"></div>
+               
                 <div class="hand second" id="second"></div>
                 <div class="center"></div>
                 <div class="clock-face"></div>
@@ -250,11 +224,12 @@
       </div>
     </div>
     <!-- main js  -->
-     <script src="/js/temprature.js"></script>
-    <script src="/js/dash.js"></script>
-    <script src="/js/quotes.js"></script>
-    <script src="/js/music.js"></script>
-    <script src="/js/clock.js"></script>
-    <script src="/js/menu.js"></script>
+     <script src="temprature.js"></script>
+    <script src="script.js"></script>
+    <script src="quotes.js"></script>
+    <script src="music.js"></script>
+    <script src="clock.js"></script>
+    <script src="menu.js"></script>
+    <script src="stopwatch.js"></script>
   </body>
 </html>

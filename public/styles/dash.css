@@ -80,10 +80,10 @@ body {
 .lists ul li a {
     text-decoration: none;
     color: black;
-      font-size: 1em;
+    font-size: 1em;
     font-weight: 700;
     font-style: italic;
-    font-family:    'poppins';  }
+    font-family: 'poppins';  }
 
 a{
     text-decoration: none;
@@ -916,3 +916,5 @@ gap: 1px;}
 /* .health a{
   color:#000;
 } */
+
+
