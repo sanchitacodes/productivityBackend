@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flow Harbour| Productivity</title>
     <!-- style -->
-    <link rel="stylesheet" href="/styles/dash.css" />
+     <link rel="stylesheet" href="/styles/dash.css"/>
+
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,7 +15,10 @@
       rel="stylesheet"
     />
     <!-- google fonts  -->
-<link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- remix icon -->
     <link
@@ -25,16 +29,54 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
 
   <body>
     <div class="header" id="header">
       <!-- header > navbar > menu logo lists account  -->
       <nav class="navbar" id="navbar">
-        <div class="menu menu">
+     
+
+        <div class=" hamburger" id="hamburger">
           <i class="ri-menu-2-fill"></i>
         </div>
+          <!-- Sidebar -->
+    <div class="sidebar " id="sidebar">
+      <div class="close-btn" id="close-btn">
+          <i class="fas fa-times"></i>
+      </div>
+
+      <div class="logoside">
+          <h1>Flow <span>Harbour</span>
+              </h1>
+      </div>
+
+      <nav class="side-nav">
+          <h3>GENERAL</h3>
+          <ul>
+              <li><i class="fas fa-home"></i> Dashboard</li>
+              <li><i class="fas fa-book"></i> Study</li>
+              <li><i class="fas fa-clock"></i> Time management</li>
+              <li><i class="fas fa-heart"></i> Health</li>
+              <li><i class="fas fa-dollar-sign"></i> Expenses</li>
+          </ul>
+
+          <h3>ACCOUNT</h3>
+          <ul>
+              <li><i class="fas fa-sign-out"></i> Logout</li>
+              <li><i class="fas fa-cog"></i> Settings</li>
+          </ul>
+      </nav>
+  </div>
+
+
         <div class="logo">
           <a id="logo" href="#">FLOW HARBOUR</a>
         </div>
@@ -45,8 +87,6 @@
             <li class="hover-underline-animation"><a href="#">CONTACT</a></li>
           </ul>
 
-
-  
           <div class="account">
             <i class="ri-account-circle-fill"></i>
           </div>
@@ -56,95 +96,129 @@
     <div class="container" id="container">
       <div class="left">
         <div class="navtwo">
-          <button class="n2buttons btn hover-underline-animation">PERSONAL DASHBOARD</button>
-        <!-- <form action = "/resource" method="GET"> -->
-          <!-- <button class="n2buttons btn hover-underline-animation"><a href="/Study/index.html">STUDY</a></button> -->
-        <form action="/study" method="GET">
-          <button class="n2buttons btn hover-underline-animation">Study</button>
-        </form>
+          <button class="n2buttons btn hover-underline-animation">
+            PERSONAL DASHBOARD
+          </button>
+          <!-- <form action = "/resource" method="GET"> -->
+          <!-- <button class="n2buttons btn hover-underline-animation">
+          STUDY
+          </button> -->
+          <form action="/study" method="GET">
+            <button class="n2buttons btn hover-underline-animation">Study</button>
+          </form>
+  
 
-          <button class="n2buttons btn hover-underline-animation">TIME MANAGEMENT</button>
-          <button class="n2buttons btn hover-underline-animation"><a href="/flowharbour-health/health.html">HEALTH</a></button>
-        <form action="/expenses" method="GET">
-          <button class="n2buttons btn hover-underline-animation">EXPANSES</button>
-        </form>
+          <button class="n2buttons btn hover-underline-animation">
+            TIME MANAGEMENT
+          </button>
+          <button class="n2buttons btn hover-underline-animation health"><a href="/flowharbour-health/health.html">HEALTH</a></button>
+
+          <form action="/expenses" method="GET">
+            <button class="n2buttons btn hover-underline-animation">
+              EXPANSES
+            </button>
+          </form>
         </div>
         <div class="shortcuts">
           <h2 class="shortcuts-title">QUICK WAYS</h2>
           <div class="scards">
             <div class="scard one">
-                <i class="fa-solid fa-list-check"></i>
-                
+              <i class="fa-solid fa-list-check"></i>
+
               <!-- <h3 onclick="document.querySelector('#todoForm').submit()">To Do List</h3>
               <form id="todoForm" action="/todos" method="GET">
                 <button type="submit"  class="btn-todo">Go to Todos</button>
             </form> -->
-            <form id="todoForm" action="/todos" method="GET">
-              <h3 onclick="document.getElementById('todoForm').submit()">To Do List</h3>
-          </form>
+              <form id="todoForm" action="/todos" method="GET">
+                <h3 onclick="document.getElementById('todoForm').submit()">
+                  To Do List
+                </h3>
+              </form>
             </div>
             <div class="scard two">
-                <i class="fa-solid fa-stopwatch"></i>
+              <i class="fa-solid fa-stopwatch"></i>
               <h3>Stopwatch</h3>
             </div>
             <div class="scard three">
-            <i class="fa-solid fa-money-bill-trend-up"></i>
-            <!-- </h3>Expense Tracker</h3>
+              <i class="fa-solid fa-money-bill-trend-up"></i>
+              <!-- </h3>Expense Tracker</h3>
             <form action="/expenses" method="GET">
                 <button type="submit" class="btn btn-todo">Go to Expenses</button>
             </form> -->
-            <form id="todoExpense" action="/expenses" method="GET">
-              <h3 onclick="document.getElementById('todoExpense').submit()">Expense Tracker</h3>
-            </form>
+              <form id="todoExpense" action="/expenses" method="GET">
+                <h3 onclick="document.getElementById('todoExpense').submit()">
+                  Expense Tracker
+                </h3>
+              </form>
             </div>
             <div class="scard four">
-                <i class="fa-solid fa-face-smile"></i>
+              <i class="fa-solid fa-face-smile"></i>
               <h3>Mood Tracker</h3>
             </div>
             <div class="scard five">
-                <i class="fa-solid fa-stopwatch-20"></i>
+              <i class="fa-solid fa-stopwatch-20"></i>
               <h3>Pomodoro</h3>
             </div>
             <div class="scard six">
-                <i class="fa-solid fa-hourglass-end"></i>
+              <i class="fa-solid fa-hourglass-end"></i>
               <h3>Timer</h3>
             </div>
           </div>
-
         </div>
       </div>
+
       <div class="right">
-       
+
+        <div class="timentemp">
+          
+            <div class="time">
+              <div class="clock">
+                <div class="hand hour" id="hour"></div>
+                <div class="hand minute" id="minute"></div>
+                <div class="hand second" id="second"></div>
+                <div class="center"></div>
+                <div class="clock-face"></div>
+            </div>
+              
+         </div>
+
+          <div class="temp">
+          
+             
+              <h1 id="temperature">--°C</h1>
+              <small id="city">Fetching location...</small>
+         
+          </div>
+        </div>
+
       
         <div class="countdown-container">
-        
+          <h2 class="headcount">Countdown</h2>
           <div id="date-section">
-              <input type="date" id="custom-date" placeholder="Select your target date">
-              <button onclick="setCustomDate()">Set Target Date</button>
+              <input type="date" id="custom-date" 
+              class = "custom-date" placeholder="Select your target date">
+              <button class="set" onclick="setCustomDate()">Set</button>
           </div>
-  
-          <!-- Reset Button Section -->
-          <!-- <div id="reset-section" style="display: none;"> -->
-            <div id="reset-section" style="display: none;">
-              <button onclick="resetCountdown()">Reset</button>
-          </div>
-
+       
+          <div id="reset-section" style="display: none;">
+            <button onclick="resetCountdown()"><i class="ri-refresh-line re"></i></button>
+        </div>
           <!-- Countdown Section -->
-          <div id="countdown">
+          <div id="countdown ">
               <div id="a">
-                  <h2 id="days">00</h2>
+                  <h2 id="days " class="days" >00</h2>
                   <p>Days</p>
               </div>
           </div>
+         
       </div>
-  
+
         
         <div class="motivation">
-          <h2>Quote of the day</h2>
+          <h2 class="headquote">Quote of the day</h2>
           <blockquote id="quote">Loading...</blockquote>
-          <span id="author">Loading...</span>
+          <span class="hidden" id="author">Loading...</span>
         </div>
-
         <div class="music">
           <div class="playerbox">
             <h2 id="music-title">Lofi</h2>
@@ -180,8 +254,11 @@
       </div>
     </div>
     <!-- main js  -->
+     <script src="/js/temprature.js"></script>
     <script src="/js/dash.js"></script>
     <script src="/js/quotes.js"></script>
     <script src="/js/music.js"></script>
+    <script src="/js/clock.js"></script>
+    <script src="/js/menu.js"></script>
   </body>
 </html>

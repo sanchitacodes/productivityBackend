@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+    <link rel="stylesheet" href="/styles/Style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="noteImg"><img src="/images/6558595.png">Notes</h1>
+
+        <!-- Button to create a new note -->
+        <form action="/notes" method="POST">
+            <textarea name="content" class="editable-note"></textarea>
+            <button type="submit" class="btn"><img src="/images/images (2).png">Create Notes</button>
+        </form>
+
+        <!-- Display notes -->
+        <div class="notes-container">
+            <% notes.forEach(function(note) { %>
+                <div class="note" id="note-<%= note._id %>">
+                    <div class="note-content">
+                        <!-- Editable content of the note -->
+                        <textarea data-id="<%= note._id %>" class="editable-note"><%= note.content %></textarea>
+                    </div>
+                    <form action="/notes/delete/<%= note._id %>?_method=DELETE" method="POST" style="display:inline;">
+                        <button type="submit" class="delete-btn">
+                            <img src="/images/images (1).png" alt="delete">
+                        </button>
+                    </form>
+                </div>
+            <% }) %>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

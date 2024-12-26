@@ -27,7 +27,8 @@
       <% todos.forEach(todo => { %>
         <li class="todo-li">
           <form action="/todos/<%= todo._id %>?_method=PUT" method="POST">
-              <input type="checkbox" <%= todo.completed ? 'checked' : '' %> /> <%= todo.task %>
+              <input type="checkbox" <%= todo.completed ? 'checked' : '' %> /> 
+              <%= todo.task %>
               <button type="submit btn-todo">Update</button>
           </form>
             <form action="/todos/<%= todo._id %>?_method=DELETE" method="POST">

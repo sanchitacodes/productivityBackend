@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: #7A82B2;
+    color: #fff;
+    padding-top: 4%;
+    padding-left: 10%;
+}
+
+.container h1 {
+    display: flex;
+    align-items: center;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.container button img {
+    width: 25px;
+    margin: 5px;
+}
+
+.container .btn {
+    display: flex;
+    align-items: center;
+    background: #444B73;
+    color: #fff;
+    font-size: 16px;
+    outline: 0;
+    border: #571094;
+    border-radius: 40px;
+    padding: 15px 25px;
+    margin: 30px 0 20px;
+    cursor: pointer;
+}
+
+.notes-container {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 20px;
+}
+
+.note {
+    background: white;
+    color: #333;
+    margin: 10px 0;
+    padding: 5px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.note-content {
+    margin-bottom: 10px;
+}
+
+.editable-note {
+    min-height: 150px;
+    background: #fff;
+    border: none;
+    padding: 15px;
+    outline: none;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+}
+
+.save-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.save-btn:hover {
+    background-color: #45a049;
+}
+
+.delete-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.delete-btn img {
+    width: 20px;
+}
+
+.container h1 img{
+    /* background-color: green; */
+    width: 60px
+}

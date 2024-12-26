@@ -1,3 +1,4 @@
+
 const apiurl = "https://qapi.vercel.app/api/random"; // API endpoint for random quotes
 const quote = document.getElementById("quote");
 const author = document.getElementById("author");
