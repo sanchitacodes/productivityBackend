@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+  />
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles/flash.css" />
+
+</head>
+<body>
+  
+
+<div class="container">
+    <h1>All Flashcards</h1>
+    <% if (flashcards.length === 0) { %>
+        <p>No flashcards available. <a href="/flashcard/new">Create one now!</a></p>
+    <% } else { %>
+      <% flashcards.forEach(flashcard => { %>
+        <div class="card" id="card-<%= flashcard.id %>">
+          <div  class="q-a">
+          <p><strong>Question:</strong> <%= flashcard.question %></p>
+          <p class="answer hide" id="answer-<%= flashcard.id %>"><strong>Answer:</strong> <%= flashcard.answer %></p>
+          </div>
+          <div class="buttons">
+            <button class="toggle-answer design-btn" data-id="<%= flashcard.id %>">Show</button>
+            <a href="/flashcard/edit/<%= flashcard.id %>">Edit</a>
+            <form action="/flashcard/delete/<%= flashcard.id %>" method="POST" style="display:inline;">
+              <button type="submit " class="design-btn del" >Delete</button>
+            </form>
+          </div>
+        </div>
+      <% }) %>
+    <% } %>
+    <a href="/flashcard/new" class="add-button">Create New Flashcard</a>
+</div>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggleButtons = document.querySelectorAll(".toggle-answer");
+
+    toggleButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        const answerId = button.getAttribute("data-id");
+        const answerElement = document.getElementById(`answer-${answerId}`);
+
+        if (answerElement.classList.contains("hide")) {
+          answerElement.classList.remove("hide");
+          button.textContent = "Hide";
+        } else {
+          answerElement.classList.add("hide");
+          button.textContent = "Show";
+        }
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

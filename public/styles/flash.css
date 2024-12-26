@@ -1,0 +1,262 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  body {
+    background-color: #f4f5fa;
+  }
+  
+  h1,h2 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #363d55;
+    margin: 1em 0;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  .index-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 0;
+  }
+  
+  .index-header button {
+    font-size: 1em;
+    background: linear-gradient(135deg, #4e89ff, #1e3f96);
+    color: #ffffff;
+    padding: 0.8em 1.2em;
+    font-weight: 500;
+    border-radius: 0.4em;
+  }
+  
+  .card-list-container {
+    display: grid;
+    gap: 1.5em;
+    grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+    margin-top: 1.5em;
+  }
+  
+  .card {
+    background-color: #ffffff;
+    box-shadow: 0 0.4em 1.2em rgba(28, 0, 80, 0.08);
+    padding: 1.2em;
+    margin: 1.5em 0;
+    border-radius: 0.4em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .q-a{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .q-a p{
+    font-size: 1em;
+    color: #414a67;
+    /* margin-bottom: 1em; */
+  }
+
+  .design-btn{
+    background-color: #222242;;
+    color: #ffffff;
+    padding: 0.5em 1.0em;
+    font-weight: 500;
+    border-radius: 0.4em;
+  }
+
+  .design-btn:hover{
+    background-color: #98a6cd;
+  }
+  .design-btn.del{
+    background-color: #e88787;
+  }
+  .design-btn.del:hover{
+    background-color: #ff5353;
+  }
+
+
+  a{
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #222242;;
+    padding: 0.5em 1.0em;
+    font-weight: 500;
+    border-radius: 0.4em;
+    text-align: center;
+
+  }
+
+  a:hover{
+    background-color: #b6d0ff;
+  }
+
+
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #666;
+  }
+  
+  textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+  }
+
+  textarea::placeholder {
+    color: #999;
+  }
+
+  .buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+  }
+
+
+  
+  .card h3 {
+    font-size: 1.2em;
+    color: #363d55;
+    margin-bottom: 0.5em;
+  }
+  
+  .card p {
+    font-size: 1em;
+    color: #414a67;
+    margin-bottom: 1em;
+  }
+  
+  .card .buttons-con {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5em;
+  }
+  
+  .card .edit,
+  .card .delete {
+    background-color: transparent;
+    padding: 0.5em;
+    font-size: 1.2em;
+    cursor: pointer;
+  }
+  
+  .card .edit {
+    color: #4e89ff;
+  }
+  
+  .card .delete {
+    color: #ff5353;
+  }
+  
+  .edit-form-container {
+    max-width: 40em;
+    margin: auto;
+    background-color: #ffffff;
+    padding: 2em;
+    border-radius: 0.6em;
+    box-shadow: 0 1em 2em rgba(28, 0, 80, 0.1);
+  }
+  
+  .edit-form-container h2 {
+    text-align: center;
+    font-size: 2em;
+    color: #363d55;
+    margin-bottom: 1.5em;
+  }
+  
+  label {
+    display: block;
+    font-size: 1em;
+    font-weight: 600;
+    color: #363d55;
+    margin-bottom: 0.5em;
+  }
+  
+  textarea {
+    width: 100%;
+    padding: 0.7em 0.5em;
+    border: 1px solid #d0d0d0;
+    outline: none;
+    color: #414a67;
+    border-radius: 0.3em;
+    resize: none;
+  }
+  
+  textarea:not(:last-child) {
+    margin-bottom: 1.2em;
+  }
+  
+  textarea:focus {
+    border-color: #4e89ff;
+  }
+  
+  #save-btn {
+    width: 100%;
+    font-size: 1em;
+    background: linear-gradient(135deg, #4e89ff, #1e3f96);
+    color: #ffffff;
+    padding: 0.8em 0;
+    border-radius: 0.4em;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  @media screen and (max-width: 800px) {
+    .card-list-container {
+      grid-template-columns: 1fr 1fr;
+      gap: 1em;
+    }
+  
+    .edit-form-container {
+      width: 90vw;
+    }
+  }
+  
+  @media screen and (max-width: 450px) {
+    body {
+      font-size: 14px;
+    }
+  
+    .card-list-container {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .hide {
+    display: none;
+  }
+  
+  

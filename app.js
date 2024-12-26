@@ -15,6 +15,7 @@ const todoRoutes = require("./routes/todos");
 const expenseRoutes = require("./routes/expense"); // Include expense routes
 const homeRoutes = require("./routes/home");
 const resourceRouter = require('./routes/resource_server'); 
+const flashcard = require("./routes/flashCard");
 //const cashinRoutes = require("./routes/cashin"); // Include cash-in routes
 
 
@@ -76,6 +77,8 @@ app.use("/todos", todoRoutes);
 app.use("/expenses", expenseRoutes); // Add expense routes
 app.use("/home", homeRoutes);
 app.use('/resource', resourceRouter);
+app.use('/flashcard', flashcard);
+
 
 
 // Catch-All for Undefined Routes
@@ -90,7 +93,7 @@ app.use((err, req, res, next) => {
 });
 
 // Start the Server
-const PORT = 3000;
+const PORT = 8080;
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });

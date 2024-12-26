@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+  />
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/styles/flash.css" />
+</head>
+<body>
+    
+
+<div class="container">
+    <h2>Create a New Flashcard</h2>
+    <form action="/flashcard/new" method="POST">
+        <label for="question">Question:</label>
+        <textarea id="question" name="question" rows="2" placeholder="Enter your question"></textarea>
+        <label for="answer">Answer:</label>
+        <textarea id="answer" name="answer" rows="4" placeholder="Enter your answer"></textarea>
+        <button type="submit" class="design-btn">Save</button>
+    </form>
+</div>
+</body>
+</html>
+

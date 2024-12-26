@@ -14,6 +14,7 @@ router.get("/login-register", (req, res) => {
 });
 
 
+
 router.post("/login-register", wrapAsync(async (req, res) => {
   const { action, username, email, password } = req.body; // 'action' will be used to distinguish between login and register forms
 
@@ -25,7 +26,7 @@ router.post("/login-register", wrapAsync(async (req, res) => {
         req.login(registeredUser, (err) => {
            if (err) return next(err);
            req.flash("success", "Welcome to Wanderlust!");
-           res.redirect("/home");
+           res.render("dashboard.ejs");
         });
      } catch (err) {
         req.flash("error", err.message);
@@ -38,7 +39,7 @@ router.post("/login-register", wrapAsync(async (req, res) => {
         failureFlash: true,
      })(req, res, () => {
         req.flash("success", "Welcome back to Wanderlust!");
-        res.redirect("/home");
+        res.render("dashboard.ejs");
      });
   }
 }));
@@ -68,7 +69,7 @@ router.get("/logout", (req, res) => {
   req.logout((err) => {
     if (err) return next(err);
     req.flash("success", "You have logged out!");
-    res.redirect("/home");
+    res.render("home.ejs");
   });
 });
 
