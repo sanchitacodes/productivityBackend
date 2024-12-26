@@ -49,25 +49,31 @@
 .note {
     background: white;
     color: #333;
-    margin: 10px 0;
-    padding: 5px;
+    margin: 10px 0px;
+    padding-left: 5px;
+    padding-top: 5px;
     border-radius: 5px;
+    padding-right: 30px;
     position: relative;
+    word-wrap: break-word;
+    /* background-color: #45a049; */
 }
 
 .note-content {
     margin-bottom: 10px;
+    /* background-color: #333; */
 }
 
 .editable-note {
-    min-height: 150px;
+    min-height: auto;
     background: #fff;
     border: none;
-    padding: 15px;
+    padding: 5px;
     outline: none;
     border-radius: 5px;
     font-size: 16px;
     width: 100%;
+    /* background-color: aqua; */
 }
 
 .save-btn {
@@ -90,6 +96,7 @@
     background: transparent;
     border: none;
     cursor: pointer;
+    z-index: 10;
 }
 
 .delete-btn img {
@@ -99,4 +106,18 @@
 .container h1 img{
     /* background-color: green; */
     width: 60px
+}
+
+textarea[name="content"] {
+    width: 80%;
+    min-height: 100px;
+}
+
+.container .edit-btn {
+    padding: 10px 20px;
+    background: #444B73;
+    border: #571094;
+    border-radius: 40px;
+    color:#fff;
+    cursor: pointer;
 }

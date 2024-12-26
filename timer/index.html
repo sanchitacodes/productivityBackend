@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -97,30 +98,27 @@
       <div class="left">
         <div class="navtwo">
           <button class="n2buttons btn hover-underline-animation">
-            Personal Dashboard
+            PERSONAL DASHBOARD
           </button>
           <!-- <form action = "/resource" method="GET"> -->
-          <!-- <button class="n2buttons btn hover-underline-animation">
+          <button class="n2buttons btn hover-underline-animation">
           STUDY
-          </button> -->
-          <form action="/study" method="GET">
-            <button class="n2buttons btn hover-underline-animation">Study</button>
-          </form>
-  
+          </button>
 
-          <button class="n2buttons btn hover-underline-animation health"><a href="/timer/index.html">
-            Time Management
-          </a></button>
-          <button class="n2buttons btn hover-underline-animation health"><a href="/flowharbour-health/health.html">Health</a></button>
-
+          <button class="n2buttons btn hover-underline-animation">
+            TIME MANAGEMENT
+          </button>
+          <button class="n2buttons btn hover-underline-animation">
+          HEALTH
+          </button>
           <form action="/expenses" method="GET">
             <button class="n2buttons btn hover-underline-animation">
-              Expanses
+              EXPANSES
             </button>
           </form>
         </div>
         <div class="shortcuts">
-          <h2 class="shortcuts-title">QUICK WAYS</h2>
+          <h2 class="shortcuts-title">TIME MANAGEMENT</h2>
           <div class="scards">
             <div class="scard one">
               <i class="fa-solid fa-list-check"></i>
@@ -129,15 +127,12 @@
               <form id="todoForm" action="/todos" method="GET">
                 <button type="submit"  class="btn-todo">Go to Todos</button>
             </form> -->
-              <form id="todoForm" action="/todos" method="GET">
-                <h3 onclick="document.getElementById('todoForm').submit()">
-                  To Do List
-                </h3>
-              </form>
+              <h3>Stopwatch</h3>
+              
             </div>
             <div class="scard two">
               <i class="fa-solid fa-stopwatch"></i>
-              <h3>Stopwatch</h3>
+              <h3>Timer</h3>
             </div>
             <div class="scard three">
               <i class="fa-solid fa-money-bill-trend-up"></i>
@@ -145,13 +140,14 @@
             <form action="/expenses" method="GET">
                 <button type="submit" class="btn btn-todo">Go to Expenses</button>
             </form> -->
-              <form id="todoExpense" action="/expenses" method="GET">
+              <!-- <form id="todoExpense" action="/expenses" method="GET">
                 <h3 onclick="document.getElementById('todoExpense').submit()">
                   Expense Tracker
                 </h3>
-              </form>
+              </form> -->
+              <h3>Promodoro</h3>
             </div>
-            <div class="scard four">
+            <!-- <div class="scard four">
               <i class="fa-solid fa-face-smile"></i>
               <h3>Mood Tracker</h3>
             </div>
@@ -162,7 +158,7 @@
             <div class="scard six">
               <i class="fa-solid fa-hourglass-end"></i>
               <h3>Timer</h3>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>

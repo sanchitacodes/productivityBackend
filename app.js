@@ -205,6 +205,7 @@ app.get("/study", (req, res) => {
 });
 
 // FlowHarbour Health Route
+app.use('/timer', express.static(path.join(__dirname, 'timer')));
 app.use('/flowharbour-health', express.static(path.join(__dirname, 'flowharbour-health')));
 
 // Catch-All for Undefined Routes

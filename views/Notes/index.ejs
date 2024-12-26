@@ -18,11 +18,14 @@
 
         <!-- Display notes -->
         <div class="notes-container">
-            <% notes.forEach(function(note) { %>
+            <% notes.forEach(note => { %>
                 <div class="note" id="note-<%= note._id %>">
                     <div class="note-content">
-                        <!-- Editable content of the note -->
-                        <textarea data-id="<%= note._id %>" class="editable-note"><%= note.content %></textarea>
+                        <form action="/notes/<%= note._id %>?_method=PUT" method="POST">
+                        <textarea name="editedContent" data-id="<%= note._id %>" class="editable-note"><%= note.content %></textarea>
+                        
+                            <button type="submit" class="edit-btn">Edit</button>
+                        </form>
                     </div>
                     <form action="/notes/delete/<%= note._id %>?_method=DELETE" method="POST" style="display:inline;">
                         <button type="submit" class="delete-btn">
@@ -33,6 +36,18 @@
             <% }) %>
         </div>
     </div>
-    <script src="script.js"></script>
+
+    <script> 
+        document.querySelectorAll('.editable-note').forEach(textarea => {
+        textarea.addEventListener('input', function () {
+            this.style.height = 'auto';
+            this.style.height = this.scrollHeight + 'px';
+        });
+    
+        // Initialize height for pre-filled textareas
+        textarea.style.height = 'auto';
+        textarea.style.height = textarea.scrollHeight + 'px';
+    });
+    </script>
 </body>
 </html>
